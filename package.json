@@ -1,0 +1,25 @@
+{
+    "name": "mmbasic",
+    "displayName": "mmbasic",
+    "description": "MicroMite Basic",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mmbasic",
+            "aliases": ["mmbasic", "mmbasic"],
+            "extensions": [".bas"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mmbasic",
+            "scopeName": "source.mmbasic",
+            "path": "./syntaxes/mmbasic.tmLanguage.json"
+        }]
+    }
+}

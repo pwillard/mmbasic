@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "MMBASIC",
+    "patterns": [{
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                    "name": "keyword.control.mmbasic",
+                    "match": "(?i:\\b(AS|CLEAR|CONTINUE|DATA|DIM|DO|LOOP|UNTIL|ELSE|ELSEIF|THEN|END|ENDIF|FUNCTION|SUB|ENDIF|ERASE|EXIT|FOR|TO|STEP|SELECT|CASE|GOSUB|GOTO|IF|IRETURN|LET|LOCAL|NEXT|OPTION|PAUSE|READ|RESTORE|RETURN|SETTICK|TIMER|WHILE|WEND|OPEN|CLOSE)\\b)"
+                },
+                {
+                    "name": "keyword.operator.logical.mmbasic",
+                    "match": "(?i:\\b(AND|NOT|OR|XOR)\\b)"
+                },
+                {
+                    "name": "entity.name.function.mmbasic",
+                    "match": "(?i:\\b(ABS|ASC|ATN|ATTR|BIN$|CINT|COS|CONST|DEG|CHR$|COLOR|LOCATE|EXP|EOF|FIX|FORMAT$|HEX$|INT|LOG|CLS|INSTR|INKEY$|INPUT|INPUT #|INPUT$|KEYDOWN|LCASE$|UCASE$|LEFT$|MID$|RIGHT$|OCT$|SPACE$|STRING$SPC|LINE INPUT|LOADBMP|SAVEBMP|LEN|MM.HPOS|MM.HRES|MM.VPOS|MM.VRES|PIXEL|POS|PRESET|PRINT|PRINT @|PSET|PEEK|PI|POINT|RAD|RND|CLR$|SGN|SIN|SQR|STR$|TAN|TAB|VAL$|VAL|ASC|MM.CMDLINE$|MM.DEVICE$|MM.FNAME$|MM.VER|ERROR|RANDOMIZE|DATE$|TIME$|LINE|CIRCLE|MODE|SCANLINE|BLIT|SPRITE|COLLISION|FONT LOAD|FONT UNLOAD|WRITE|PIN|SETPIN)\\b)"
+                },
+                {
+                    "name": "entity.name.type.mmbasic",
+                    "match": "(?i:\\b(integer|string|float)\\b)"
+                },
+                {
+                    "name": "comment.line.mmbasic",
+                    "match": "(?i:(\\bREM\\b|').*)"
+                },
+                {
+                    "name": "variable.name.mmbasic",
+                    "match": "\\b[A-Za-z](\\$|[A-Za-z0-9]*)"
+                },
+                {
+                    "name": "constant.numeric.mmbasic",
+                    "match": "-?\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)|(\\$[a-zA-Z0-9]+)|(@[0|1]+)\\b"
+                },
+                {
+                    "match": "&|\\*|\\-|\\+|=|<>|<|>|\\|~",
+                    "name": "keyword.operator.arithmetic.mmbasic"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.mmbasic",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.mmbasic",
+                "match": "\\\\."
+            }]
+        }
+    },
+    "scopeName": "source.mmbasic"
+}
