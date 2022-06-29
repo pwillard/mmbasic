@@ -10,21 +10,30 @@
     ],
     "repository": {
         "keywords": {
-            "patterns": [{
+            "patterns": [
+                {
+                    "name": "strong.mmbasic",
+                    "match": "(?i:\\b(GUI|GUI RESTORE|BOX|ARC|AREA|BACKLIGHT|BITMAP|CALIBRATE|CURSOR|RESET|BCOLOUR|BEEP|BARGAUGE|BUTTON|CAPTION|CHECKBOX|DELETE|GUI DISABLE|DISPLAYBOX|MESSAGEBOX|DRAWBUTTON|ENABLE|FCOLOR|FONT|FRAME|FORMATBOX|GAUGE|INTERRUPT|IMAGE|LED|NUMBERBOX|RADIO|REDRAW|SETUP|SHOW|SPINBOX|SWITCH|TEXTBOX|CANCEL|LINE|CIRCLE|LOADBMP|SAVEBMP|PIXEL|MODE|SCANLINE|BLIT|SPRITE|TOUCH|COLLISION|LOAD|UNLOAD|VOLUME|DRAW3D|SPI|SPI2|RTC GETTIME|RTC SETTIME|RTC SETREG|RTC GETREG|CHDIR|DIR$|MKDIR|RMDIR|CPU RESTART|WATCHDOG|RBOX|PULSE|PULSIN|PWM|POKE|PEEK|PLAY|PEN|PAGE|LCD INIT|LCD|LCD CLEAR|LCD CLOSE|LCD CMD|LCD DATA|KEYPAD|BMP|GIF|JPG|PNG|IR)\\b)" 
+                },
+                {
                     "name": "keyword.control.mmbasic",
-                    "match": "(?i:\\b(AS|CLEAR|CONTINUE|DATA|DIM|DO|LOOP|UNTIL|ELSE|ELSEIF|THEN|END|ENDIF|FUNCTION|SUB|ENDIF|ERASE|EXIT|FOR|TO|STEP|SELECT|CASE|GOSUB|GOTO|IF|IRETURN|LET|LOCAL|NEXT|OPTION|PAUSE|READ|RESTORE|RETURN|SETTICK|TIMER|WHILE|WEND|OPEN|CLOSE)\\b)"
+                    "match": "(?i:\\b(AS|CLEAR|CONTINUE|DATA|DIM|DO|LOOP|UNTIL|ELSE|ELSEIF|THEN|ENDIF|ENDIF|ERASE|EXIT|FOR|TO|STEP|SELECT|CASE|IS|GOSUB|GOTO|IF|IRETURN|LET|LOCAL|NEXT|OPTION|PAUSE|READ|RESTORE|RETURN|TIMER|WHILE|WEND|OPEN|CLOSE|ONEWIRE READ|ONEWIRE RESET|ONEWIRE WRITE|MOUSE)\\b)"
                 },
                 {
                     "name": "keyword.operator.logical.mmbasic",
-                    "match": "(?i:\\b(AND|NOT|OR|XOR)\\b)"
+                    "match": "(?i:\\b(AND|NOT|OR|XOR|MOD)\\b)"
                 },
                 {
                     "name": "keyword.other.mmbasic",
-                    "match": "(?i:\\b(ABS|ASC|ATN|ATTR|BIN|CINT|COS|CONST|DEG|CHR|COLOR|COLOUR|LOCATE|EXP|EOF|FIX|FORMAT|HEX|INT|LOG|CLS|INSTR|INKEY|INPUT|INPUT #|INPUT|KEYDOWN|LCASE|UCASE|LEFT|MID|RIGHT|OCT|SPACE|STRING|SPC|LINE INPUT|LOADBMP|SAVEBMP|LEN|MM.HPOS|MM.HRES|MM.VPOS|MM.VRES|PIXEL|POS|PRESET|PRINT|PSET|PEEK|PI|POINT|RAD|RND|CLR|SGN|SIN|SQR|STR|TAN|TAB|VAL|ASC|MM.CMDLINE|MM.DEVICE|MM.FNAME|MM.VER|ERROR|RANDOMIZE|DATE|TIME|LINE|CIRCLE|MODE|SCANLINE|BLIT|SPRITE|COLLISION|FONT LOAD|FONT UNLOAD|WRITE|PIN|SETPIN)\\b)"
+                    "match": "(?i:\\b(ABS|ASC|ASIN|ATAN2|ATAN3|ATN|ANGLE|APPEND|ATTR|BAUDRATE|BIN$|CINT|CTRLVAL|COS|DEG|CHR$|COSH|COLOR|COLOUR|CWD|LOCATE|EXP|EOF|FIX|FAST|FORMAT|HEX$|INT|LOG|CLS|INSTR|INKEY$|INPUT|INPUT #|INPUT|KEYDOWN|LCASE$|UCASE$|LEFT$|MID$|RIGHT$|OCT$|SPACE|SPC|LINE INPUT|LEN|MIN|MM.HPOS|MM.HRES|MM.VPOS|MM.VRES|POS|PRESET|PRINT|PRINT @|PSET|PEEK|PI|POINT|RAD|RND|CLR|SEEK|SGN|SIN|SQR|STR|STR2BIN|TAN|TAB|VAL|VAR CLEAR|VAR SAVE|VAR RESTORE|VAR|ASC|MM.|ERROR|RANDOMIZE|DATE$|TIME$|DATETIME$|WRITE|PIN|SETPIN|ADC|FREQUENCY|TRIGGER|EXPLICIT|BASE|START|LONGSTRING|COPY|CHOICE|SETTICK|DHT22|HUMID|I2C|I2C2|I2C3|CONST|STATIC|STRING$|ON KEY|ON ERROR|LOF)\\b)"
+                },
+                {
+                    "name": "support.function.mmbasic",
+                    "match": "(?i:\\b(SUB|FUNCTION|END FUNCTION|END SUB|END|#DEFINE|#COMMENT)\\b)" 
                 },
                 {
                     "name": "entity.name.type.mmbasic",
-                    "match": "(?i:\\b(integer|string|float)\\b)"
+                    "match": "(?i:\\b(integer|string|float|WORD|BYTE|SHORT)\\b)"
                 },
                 {
                     "name": "comment.line.mmbasic",
@@ -39,7 +48,7 @@
                     "match": "-?\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)|(\\$[a-zA-Z0-9]+)|(@[0|1]+)\\b"
                 },
                 {
-                    "match": "&|\\*|\\-|\\+|=|<>|<|>|\\|~",
+                    "match": "&|\\*|\\-|\\+|=|<>|<|>|\\|\\^|<<|>>|~",
                     "name": "keyword.operator.arithmetic.mmbasic"
                 }
             ]
